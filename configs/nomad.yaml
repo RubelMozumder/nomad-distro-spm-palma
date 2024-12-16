@@ -1,6 +1,8 @@
 services:
-  api_host: "localhost"
-  api_base_path: "/nomad-oasis"
+  api_host: 'kakarot'
+  api_base_path: '/nomad-oasis'
+  upload_limit: 10000
+  admin_user_id: ''
 
 oasis:
   is_oasis: true
@@ -8,18 +10,40 @@ oasis:
 
 north:
   jupyterhub_crypt_key: "978bfb2e13a8448a253c629d8dd84ff89587f30e635b753153960930cad9d36d"
-  # tools:
-  #   options:
-  #     jupyter:
-  #       image: ghcr.io/rubelmozumder/nomad-distro-spm-palma/jupyter:main
+  tools:
+    options:
+      jupyter:
+        description: '### **Jupyter Notebook**: The Classic Notebook Interface
+
+
+          The Jupyter Notebook is the original web application for creating and sharing
+          computational documents. It offers a simple, streamlined, document-centric
+          experience.'
+        file_extensions:
+        - ipynb
+        icon: jupyter_logo.svg
+        image: gitlab-registry.mpcdf.mpg.de/nomad-lab/north/jupyter:latest
+        image_pull_policy: Always
+        maintainer:
+        - email: markus.scheidgen@physik.hu-berlin.de
+          name: Markus Scheidgen
+        mount_path: /home/jovyan
+        path_prefix: lab/tree
+        privileged: false
+        short_description: Basic jupyter run with an empty notebook or on given notebook file.
+        with_path: true
+        external_mounts:
+          - host_path: /data/
+            bind: /home/jovyan/Nanonisdata
+            mode: ro
 
 meta:
-  deployment: "oasis"
-  deployment_url: "https://my-oasis.org/api"
-  maintainer_email: "me@my-oasis.org"
+  deployment: 'oasis'
+  deployment_url: 'https://kakarot.physik.hu-berlin.de/nomad-oasis/api'
+  maintainer_email: 'cojal@physik.hu-berlin.de'
 
 logstash:
-  enable: false
+  enable: true
 
 mongo:
   db_name: nomad_oasis_v1
