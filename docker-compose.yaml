@@ -2,7 +2,7 @@ services:
   # broker for celery
   rabbitmq:
     restart: unless-stopped
-    image: rabbitmq:3.11.5
+    image: rabbitmq:4
     container_name: nomad_oasis_rabbitmq
     environment:
       - RABBITMQ_ERLANG_COOKIE=SWQOKODSQALRPCLNMEQG
@@ -12,7 +12,7 @@ services:
     volumes:
       - rabbitmq:/var/lib/rabbitmq
     healthcheck:
-      test: ["CMD", "rabbitmq-diagnostics", "--silent", "--quiet", "ping"]
+      test: [ "CMD", "rabbitmq-diagnostics", "--silent", "--quiet", "ping" ]
       interval: 10s
       timeout: 10s
       retries: 30
@@ -24,17 +24,12 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.28
     container_name: nomad_oasis_elastic
     environment:
-      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
       - discovery.type=single-node
     volumes:
       - elastic:/usr/share/elasticsearch/data
     healthcheck:
-      test:
-        - "CMD"
-        - "curl"
-        - "--fail"
-        - "--silent"
-        - "http://elastic:9200/_cat/health"
+      test: [ "CMD", "curl", "--fail", "--silent", "http://elastic:9200/_cat/health" ]
       interval: 10s
       timeout: 10s
       retries: 30
@@ -43,7 +38,7 @@ services:
   # the user data db
   mongo:
     restart: unless-stopped
-    image: mongo:5.0.6
+    image: mongo:5
     container_name: nomad_oasis_mongo
     environment:
       - MONGO_DATA_DIR=/data/db
@@ -53,13 +48,7 @@ services:
       - ./.volumes/mongo:/backup
     command: mongod --logpath=/dev/null # --quiet
     healthcheck:
-      test:
-        - "CMD"
-        - "mongo"
-        - "mongo:27017/test"
-        - "--quiet"
-        - "--eval"
-        - "'db.runCommand({ping:1}).ok'"
+      test: [ "CMD", "mongo", "mongo:27017/test", "--quiet", "--eval", "'db.runCommand({ping:1}).ok'" ]
       interval: 10s
       timeout: 10s
       retries: 30
@@ -85,7 +74,7 @@ services:
       mongo:
         condition: service_healthy
     volumes:
-      # - ./configs/nomad.yaml:/app/nomad.yaml
+      - ./configs/nomad.yaml:/app/nomad.yaml
       - ./.volumes/fs:/app/.volumes/fs
     command: python -m celery -A nomad.processing worker -l info -Q celery --max-tasks-per-child 128
 
@@ -102,7 +91,7 @@ services:
       NOMAD_RABBITMQ_HOST: rabbitmq
       NOMAD_ELASTIC_HOST: elastic
       NOMAD_MONGO_HOST: mongo
-      NOMAD_LOGSTASH_HOST: logtransfer
+      # NOMAD_LOGSTASH_HOST: logtransfer
       NOMAD_NORTH_HUB_HOST: north
     depends_on:
       rabbitmq:
@@ -114,16 +103,11 @@ services:
       north:
         condition: service_started
     volumes:
-      # - ./configs/nomad.yaml:/app/nomad.yaml
+      - ./configs/nomad.yaml:/app/nomad.yaml
       - ./.volumes/fs:/app/.volumes/fs
     command: ./run.sh
     healthcheck:
-      test:
-        - "CMD"
-        - "curl"
-        - "--fail"
-        - "--silent"
-        - "http://localhost:8000/-/health"
+      test: [ "CMD", "curl", "--fail", "--silent", "http://localhost:8000/-/health" ]
       interval: 10s
       timeout: 10s
       retries: 30
@@ -147,18 +131,13 @@ services:
       NOMAD_ELASTIC_HOST: elastic
       NOMAD_MONGO_HOST: mongo
     volumes:
-      # - ./configs/nomad.yaml:/app/nomad.yaml
+      - ./configs/nomad.yaml:/app/nomad.yaml
       - ./.volumes/fs:/app/.volumes/fs
       - /var/run/docker.sock:/var/run/docker.sock
-    user: "1000:991"
+    user: '1000:999' # Change the docker group id (here 999) according to the host system
     command: python -m nomad.cli admin run hub
     healthcheck:
-      test:
-        - "CMD"
-        - "curl"
-        - "--fail"
-        - "--silent"
-        - "http://localhost:8081/nomad-oasis/north/hub/health"
+      test: [ "CMD", "curl", "--fail", "--silent", "http://localhost:8081/nomad-oasis/north/hub/health" ]
       interval: 10s
       timeout: 10s
       retries: 30
@@ -181,7 +160,7 @@ services:
       mongo:
         condition: service_healthy
     volumes:
-      # - ./configs/nomad.yaml:/app/nomad.yaml
+      - ./configs/nomad.yaml:/app/nomad.yaml
       - ./.volumes/fs:/app/.volumes/fs
     command: python -m nomad.cli admin run logtransfer
     profiles: ["with_logtransfer"]
