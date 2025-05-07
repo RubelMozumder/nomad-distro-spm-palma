@@ -1,8 +1,10 @@
+#version: "3"
+
 services:
   # broker for celery
   rabbitmq:
     restart: unless-stopped
-    image: rabbitmq:4
+    image: rabbitmq:3.11.5
     container_name: nomad_oasis_rabbitmq
     environment:
       - RABBITMQ_ERLANG_COOKIE=SWQOKODSQALRPCLNMEQG
@@ -21,7 +23,7 @@ services:
   # the search engine
   elastic:
     restart: unless-stopped
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.24
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.28
     container_name: nomad_oasis_elastic
     environment:
       - ES_JAVA_OPTS=-Xms1g -Xmx1g
@@ -38,7 +40,7 @@ services:
   # the user data db
   mongo:
     restart: unless-stopped
-    image: mongo:5
+    image: mongo:5.0.6
     container_name: nomad_oasis_mongo
     environment:
       - MONGO_DATA_DIR=/data/db
@@ -74,7 +76,7 @@ services:
         condition: service_healthy
     volumes:
       - ./configs/nomad.yaml:/app/nomad.yaml
-      - ./.volumes/fs:/app/.volumes/fs
+      - /data/nomad-oasis/.volumes/fs:/app/.volumes/fs
     command: python -m celery -A nomad.processing worker -l info -Q celery
 
   # nomad app (api + proxy)
@@ -102,7 +104,7 @@ services:
         condition: service_started
     volumes:
       - ./configs/nomad.yaml:/app/nomad.yaml
-      - ./.volumes/fs:/app/.volumes/fs
+      - /data/nomad-oasis/.volumes/fs:/app/.volumes/fs
     command: ./run.sh
     healthcheck:
       test: [ "CMD", "curl", "--fail", "--silent", "http://localhost:8000/-/health" ]
@@ -129,9 +131,9 @@ services:
       NOMAD_MONGO_HOST: mongo
     volumes:
       - ./configs/nomad.yaml:/app/nomad.yaml
-      - ./.volumes/fs:/app/.volumes/fs
+      - /data/nomad-oasis/.volumes/fs:/app/.volumes/fs
       - /var/run/docker.sock:/var/run/docker.sock
-    user: '1000:999' # Change the docker group id (here 999) according to the host system
+    user: '1000:998' # Change the docker group id (here 999) according to the host system
     command: python -m nomad.cli admin run hub
     healthcheck:
       test: [ "CMD", "curl", "--fail", "--silent", "http://localhost:8081/nomad-oasis/north/hub/health" ]
@@ -157,14 +159,14 @@ services:
         condition: service_healthy
     volumes:
       - ./configs/nomad.yaml:/app/nomad.yaml
-      - ./.volumes/fs:/app/.volumes/fs
+      - /data/nomad-oasis/.volumes/fs:/app/.volumes/fs
     command: python -m nomad.cli admin run logtransfer
     profiles: ["with_logtransfer"]
 
   # nomad proxy (a reverse proxy for nomad)
   proxy:
     restart: unless-stopped
-    image: nginx:stable-alpine
+    image: nginx:1.27.4-alpine
     container_name: nomad_oasis_proxy
     command: nginx -g 'daemon off;'
     volumes:
@@ -178,6 +180,7 @@ services:
         condition: service_healthy
     ports:
       - 80:80
+      - 443:443
 
   # jupyterlab image: (this is only used to pull the image, no service is run for this)
   jupyterlab_image:
