@@ -1891,7 +1891,7 @@ requires-dist = [
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=v0.1.1" },
     { name = "pynxtools", marker = "extra == 'plugins'", specifier = "==0.11.0" },
     { name = "pynxtools-camels", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/pynxtools-camels.git?rev=v0.1.1" },
-    { name = "pynxtools-spm", marker = "extra == 'plugins'", specifier = "==0.1.4" },
+    { name = "pynxtools-spm", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/pynxtools-spm.git?rev=FixErrorInSTSplot" },
     { name = "setuptools" },
 ]
 provides-extras = ["plugins", "jupyter", "dev"]
@@ -2976,15 +2976,11 @@ dependencies = [
 
 [[package]]
 name = "pynxtools-spm"
-version = "0.1.4"
-source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+version = "0.1.4.post1.dev1+gc7938ec"
+source = { git = "https://github.com/FAIRmat-NFDI/pynxtools-spm.git?rev=FixErrorInSTSplot#c7938ecd5e06af5280c9ec4addf258ccfe450058" }
 dependencies = [
     { name = "findiff" },
     { name = "pynxtools" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/50/10/17903fbd9d0204ffa77bcfab5202e135a8a5a58a01795ca922b0958f7b67/pynxtools_spm-0.1.4.tar.gz", hash = "sha256:ffa1c96607aaf96186dd91f7cf0713c56291b1a6a61988d435e900a009c8ffc0", size = 1624397, upload-time = "2025-08-04T08:31:55.564Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/3a/ea/d422e1fb735ee9041c7f1acc66c5ffc6fd3a4865b781746d7ab57db97ab1/pynxtools_spm-0.1.4-py3-none-any.whl", hash = "sha256:d4d978c93ec2898d885ccd618ce7c5590cb55cadfb27c195f9f57707e50dfc9d", size = 1643150, upload-time = "2025-08-04T08:31:54.133Z" },
 ]
 
 [[package]]
