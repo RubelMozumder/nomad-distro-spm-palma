@@ -3,7 +3,13 @@
 > [!NOTE]
 > The branch `CarlosAndresLab` is a default and protected branch of this forked repository. 
 > The branch `main` is also protected but mainly representing the upstream branch of the original template repository.
-
+>
+> **Branches and their corresponding images**
+> `CarlosAndresLab`  is the namely spm version that has gallery support for hdf5 files.
+>            image: `ghcr.io/rubelmozumder/nomad-distro-spm-palma:carlosandreslab`
+>
+> `test-nomad` is a branch that is used for testing pynxtools, pnxtools plugins and different release or version of nomad.
+>            image: `ghcr.io/rubelmozumder/nomad-distro-spm-palma:test-nomad`
 
 > [!CAUTION]
 > The templated repository will run a GitHub action on creation which might take a few minutes.
