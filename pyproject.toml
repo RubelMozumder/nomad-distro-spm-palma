@@ -33,7 +33,7 @@ plugins = [
   "nomad-simulations==0.3.2",
   "pynxtools==0.11.0",
   # "pynxtools-spm==0.1.4",
-  "pynxtools-spm @ git+https://github.com/FAIRmat-NFDI/pynxtools-spm.git@vFixErrorInSTSplot",
+  "pynxtools-spm @ git+https://github.com/FAIRmat-NFDI/pynxtools-spm.git@FixErrorInSTSplot",
   "pynxtools-camels @ git+https://github.com/FAIRmat-NFDI/pynxtools-camels.git@v0.1.1",
   "nomad-schema-plugin-run>=1.0.1",
   "nomad-schema-plugin-simulation-workflow>=1.0.1",
