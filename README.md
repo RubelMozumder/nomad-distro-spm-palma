@@ -1,6 +1,8 @@
 ![docker image](https://github.com/RubelMozumder/nomad-distro-spm-palma/actions/workflows/docker-publish.yml/badge.svg)
 
-> [!NOTE] The branch `CarlosAndresLab` is a default and protected branch of this forked repository. The branch `main` is also protected but mainly representing the upstream branch of the original template repository.
+> [!NOTE]
+> The branch `CarlosAndresLab` is a default and protected branch of this forked repository. 
+> The branch `main` is also protected but mainly representing the upstream branch of the original template repository.
 
 
 > [!IMPORTANT]
