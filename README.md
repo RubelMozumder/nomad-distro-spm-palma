@@ -1,5 +1,8 @@
 ![docker image](https://github.com/RubelMozumder/nomad-distro-spm-palma/actions/workflows/docker-publish.yml/badge.svg)
 
+> [!NOTE]
+> The branch `test-nomad` is protected along with the branch `CarlosAndresLab` branch of this forked repository. 
+> The branch main is also protected but mainly representing the upstream branch of the original template repository.
 
 > [!IMPORTANT]
 > The templated repository will run a GitHub action on creation which might take a few minutes.
