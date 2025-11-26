@@ -24,7 +24,7 @@ dependencies = ["nomad-lab-spm[parsing, infrastructure]==1.4.0", "setuptools"]
 
 
 [project.urls]
-repository = "https://github.com/FAIRmat-NFDI/nomad-distro-template"
+repository = "https://github.com/rubelmozumder/nomad-distro-spm-palma"
 
 [project.optional-dependencies]
 plugins = [
