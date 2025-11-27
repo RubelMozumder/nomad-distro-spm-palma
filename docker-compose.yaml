@@ -265,7 +265,7 @@ services:
   # nomad remote tools hub (JupyterHUB, e.g. for AI Toolkit)
   north:
     restart: unless-stopped
-    image: ghcr.io/rubelmozumder/nomad-distro-spm-carlosandreslab/jupyter:pr-23
+    image: ghcr.io/rubelmozumder/nomad-distro-spm-carlosandreslab:pr-23
     platform: linux/amd64
     container_name: nomad_oasis_north
     environment:
@@ -282,7 +282,7 @@ services:
     env_file:
       - ./.env
     volumes:
-      # - ./configs/nomad.yaml:/app/nomad.yaml
+      - ./configs/nomad.yaml:/app/nomad.yaml
       - ./.volumes/fs:/app/.volumes/fs
       - /var/run/docker.sock:/var/run/docker.sock
     user: "1000:999"
