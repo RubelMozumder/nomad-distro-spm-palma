@@ -316,12 +316,47 @@ wheels = [
 ]
 
 [[package]]
+name = "bleach"
+version = "6.3.0"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "webencodings" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/07/18/3c8523962314be6bf4c8989c79ad9531c825210dd13a8669f6b84336e8bd/bleach-6.3.0.tar.gz", hash = "sha256:6f3b91b1c0a02bb9a78b5a454c92506aa0fdf197e1d5e114d2e00c6f64306d22", size = 203533, upload-time = "2025-10-27T17:57:39.211Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cd/3a/577b549de0cc09d95f11087ee63c739bba856cd3952697eec4c4bb91350a/bleach-6.3.0-py3-none-any.whl", hash = "sha256:fe10ec77c93ddf3d13a73b035abaac7a9f5e436513864ccdad516693213c65d6", size = 164437, upload-time = "2025-10-27T17:57:37.538Z" },
+]
+
+[[package]]
 name = "blinker"
 version = "1.9.0"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/21/28/9b3f50ce0e048515135495f198351908d99540d69bfdc8c1d15b73dc55ce/blinker-1.9.0.tar.gz", hash = "sha256:b4ce2265a7abece45e7cc896e98dbebe6cead56bcf805a3d23136d145f5445bf", size = 22460, upload-time = "2024-11-08T17:25:47.436Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/10/cb/f2ad4230dc2eb1a74edf38f1a38b9b52277f75bef262d8908e60d957e13c/blinker-1.9.0-py3-none-any.whl", hash = "sha256:ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc", size = 8458, upload-time = "2024-11-08T17:25:46.184Z" },
+]
+
+[[package]]
+name = "bokeh"
+version = "3.8.1"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "contourpy", version = "1.3.2", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "contourpy", version = "1.3.3", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "jinja2" },
+    { name = "narwhals" },
+    { name = "numpy", version = "2.2.6", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "numpy", version = "2.3.5", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "packaging" },
+    { name = "pandas" },
+    { name = "pillow" },
+    { name = "pyyaml" },
+    { name = "tornado", marker = "sys_platform != 'emscripten'" },
+    { name = "xyzservices" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/de/42/777c0627dbd78a2a7c6c6a1c3327e8a787ec99a4b84ae93245ce49c96af7/bokeh-3.8.1.tar.gz", hash = "sha256:40df8e632de367399d06979cbd76c9e68a133a3138e1adde37c4a4715ecb4d6e", size = 6529791, upload-time = "2025-11-07T20:50:59.565Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5d/e7/b18bee0772d49c0f78d57f15a68e85257abf7224d9b910706abe8bd1dc0f/bokeh-3.8.1-py3-none-any.whl", hash = "sha256:89a66cb8bfe85e91bce144e3ccf3c4a6f0f1347e7006282972568ea0ecacbb00", size = 7206137, upload-time = "2025-11-07T20:50:58.108Z" },
 ]
 
 [[package]]
@@ -654,6 +689,15 @@ source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages
 sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44", size = 27697, upload-time = "2022-10-25T02:36:22.414Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335, upload-time = "2022-10-25T02:36:20.889Z" },
+]
+
+[[package]]
+name = "colorcet"
+version = "3.1.0"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/5f/c3/ae78e10b7139d6b7ce080d2e81d822715763336aa4229720f49cb3b3e15b/colorcet-3.1.0.tar.gz", hash = "sha256:2921b3cd81a2288aaf2d63dbc0ce3c26dcd882e8c389cc505d6886bf7aa9a4eb", size = 2183107, upload-time = "2024-02-29T19:15:42.976Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c6/c6/9963d588cc3d75d766c819e0377a168ef83cf3316a92769971527a1ad1de/colorcet-3.1.0-py3-none-any.whl", hash = "sha256:2a7d59cc8d0f7938eeedd08aad3152b5319b4ba3bcb7a612398cc17a384cb296", size = 260286, upload-time = "2024-02-29T19:15:40.494Z" },
 ]
 
 [[package]]
@@ -1063,16 +1107,6 @@ source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages
 sdist = { url = "https://files.pythonhosted.org/packages/b2/9d/c3b43da9515bd270df0f80548d9944e389870713cc1fe2b8fb35fe2bcefd/docstring_parser-0.17.0.tar.gz", hash = "sha256:583de4a309722b3315439bb31d64ba3eebada841f2e2cee23b99df001434c912", size = 27442, upload-time = "2025-07-21T07:35:01.868Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/55/e2/2537ebcff11c1ee1ff17d8d0b6f4db75873e3b0fb32c2d4a2ee31ecb310a/docstring_parser-0.17.0-py3-none-any.whl", hash = "sha256:cf2569abd23dce8099b300f9b4fa8191e9582dda731fd533daf54c4551658708", size = 36896, upload-time = "2025-07-21T07:35:00.684Z" },
-]
-
-[[package]]
-name = "eelsdbconverter"
-version = "1.0"
-source = { git = "https://github.com/nomad-coe/nomad-parser-eelsdb.git?rev=entry-point#788eb03dc71ef9b164e2a5ccb9c0209b546f5c38" }
-dependencies = [
-    { name = "nomad-lab" },
-    { name = "pandas" },
-    { name = "requests" },
 ]
 
 [[package]]
@@ -1514,6 +1548,28 @@ wheels = [
 ]
 
 [[package]]
+name = "holoviews"
+version = "1.22.0"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "bokeh" },
+    { name = "colorcet" },
+    { name = "narwhals" },
+    { name = "numpy", version = "2.2.6", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "numpy", version = "2.3.5", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "packaging" },
+    { name = "pandas" },
+    { name = "panel" },
+    { name = "param" },
+    { name = "python-dateutil" },
+    { name = "pyviz-comms" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8e/03/e8bc53859f385965c2120c585834ec3159ee1362da5a69d355f655ab581f/holoviews-1.22.0.tar.gz", hash = "sha256:2bd3eb5ef5062b893a56c4c42077a3ed92314a92f378d2bc77c75e017b86edba", size = 5504374, upload-time = "2025-11-10T17:45:15.861Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9f/3d/e60b64b6d8af103739914e1d3e1e4bb3b464a4ec6435aa146ff63a24dc3c/holoviews-1.22.0-py3-none-any.whl", hash = "sha256:452f8822c0abb9c8a443d6410d3e6c4c86d8fc7dd5c2ae244ff194a321b1a863", size = 5942373, upload-time = "2025-11-10T17:45:13.56Z" },
+]
+
+[[package]]
 name = "httpcore"
 version = "1.0.9"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -1583,6 +1639,26 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/78/82/08f8c936781f67d9e6b9eeb8a0c8b4e406136ea4c3d1f89a5db71d42e0e6/httpx-0.27.2.tar.gz", hash = "sha256:f7c2be1d2f3c3c3160d441802406b206c2b76f5947b11115e6df10c6c65e66c2", size = 144189, upload-time = "2024-08-27T12:54:01.334Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/56/95/9377bcb415797e44274b51d46e3249eba641711cf3348050f76ee7b15ffc/httpx-0.27.2-py3-none-any.whl", hash = "sha256:7bb2708e112d8fdd7829cd4243970f0c223274051cb35ee80c03301ee29a3df0", size = 76395, upload-time = "2024-08-27T12:53:59.653Z" },
+]
+
+[[package]]
+name = "hvplot"
+version = "0.12.1"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "bokeh" },
+    { name = "colorcet" },
+    { name = "holoviews" },
+    { name = "numpy", version = "2.2.6", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "numpy", version = "2.3.5", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "packaging" },
+    { name = "pandas" },
+    { name = "panel" },
+    { name = "param" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/fe/5d/b067021c7dedfbe45c43b2e34287430320942d63814eeafed0bfabc35c3e/hvplot-0.12.1.tar.gz", hash = "sha256:66f4c9dbb7e5580c09ade55b14864ff6fcc96ed9ce11f7b67e9eb7072e2ed875", size = 7078235, upload-time = "2025-08-29T08:27:38.361Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/60/f5/99be28b5d19644343f51391841dadf48b91ade96c1885e1630727cbcb4bf/hvplot-0.12.1-py3-none-any.whl", hash = "sha256:034b5061cba597877f85dd427523364f11677d9d04c5e845c17e6d733a7bfaed", size = 175470, upload-time = "2025-08-29T08:27:35.939Z" },
 ]
 
 [[package]]
@@ -1902,6 +1978,18 @@ wheels = [
 ]
 
 [[package]]
+name = "linkify-it-py"
+version = "2.0.3"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "uc-micro-py" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2a/ae/bb56c6828e4797ba5a4821eec7c43b8bf40f69cda4d4f5f8c8a2810ec96a/linkify-it-py-2.0.3.tar.gz", hash = "sha256:68cda27e162e9215c17d786649d1da0021a451bdc436ef9e0fa0ba5234b9b048", size = 27946, upload-time = "2024-02-04T14:48:04.179Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/04/1e/b832de447dee8b582cac175871d2f6c3d5077cc56d5575cadba1fd1cccfa/linkify_it_py-2.0.3-py3-none-any.whl", hash = "sha256:6bcbc417b0ac14323382aef5c5192c0075bf8a9d6b41820a2b66371eac6b6d79", size = 19820, upload-time = "2024-02-04T14:48:02.496Z" },
+]
+
+[[package]]
 name = "lxml"
 version = "6.0.2"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -2047,6 +2135,27 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/9e/38/bd5b78a920a64d708fe6bc8e0a2c075e1389d53bef8413725c63ba041535/mako-1.3.10.tar.gz", hash = "sha256:99579a6f39583fa7e5630a28c3c1f440e4e97a414b80372649c0ce338da2ea28", size = 392474, upload-time = "2025-04-10T12:44:31.16Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/87/fb/99f81ac72ae23375f22b7afdb7642aba97c00a713c217124420147681a2f/mako-1.3.10-py3-none-any.whl", hash = "sha256:baef24a52fc4fc514a0887ac600f9f1cff3d82c61d4d700a1fa84d597b88db59", size = 78509, upload-time = "2025-04-10T12:50:53.297Z" },
+]
+
+[[package]]
+name = "markdown"
+version = "3.10"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7d/ab/7dd27d9d863b3376fcf23a5a13cb5d024aed1db46f963f1b5735ae43b3be/markdown-3.10.tar.gz", hash = "sha256:37062d4f2aa4b2b6b32aefb80faa300f82cc790cb949a35b8caede34f2b68c0e", size = 364931, upload-time = "2025-11-03T19:51:15.007Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/70/81/54e3ce63502cd085a0c556652a4e1b919c45a446bd1e5300e10c44c8c521/markdown-3.10-py3-none-any.whl", hash = "sha256:b5b99d6951e2e4948d939255596523444c0e677c669700b1d17aa4a8a464cb7c", size = 107678, upload-time = "2025-11-03T19:51:13.887Z" },
+]
+
+[[package]]
+name = "markdown-it-py"
+version = "4.0.0"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "mdurl" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5b/f5/4ec618ed16cc4f8fb3b701563655a69816155e79e24a17b651541804721d/markdown_it_py-4.0.0.tar.gz", hash = "sha256:cb0a2b4aa34f932c007117b194e945bd74e0ec24133ceb5bac59009cda1cb9f3", size = 73070, upload-time = "2025-08-11T12:57:52.854Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/94/54/e7d793b573f298e1c9013b8c4dade17d481164aa517d1d7148619c2cedbf/markdown_it_py-4.0.0-py3-none-any.whl", hash = "sha256:87327c59b172c5011896038353a81343b6754500a08cd7a4973bb48c6d578147", size = 87321, upload-time = "2025-08-11T12:57:51.923Z" },
 ]
 
 [[package]]
@@ -2356,6 +2465,27 @@ wheels = [
 ]
 
 [[package]]
+name = "mdit-py-plugins"
+version = "0.5.0"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "markdown-it-py" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b2/fd/a756d36c0bfba5f6e39a1cdbdbfdd448dc02692467d83816dff4592a1ebc/mdit_py_plugins-0.5.0.tar.gz", hash = "sha256:f4918cb50119f50446560513a8e311d574ff6aaed72606ddae6d35716fe809c6", size = 44655, upload-time = "2025-08-11T07:25:49.083Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fb/86/dd6e5db36df29e76c7a7699123569a4a18c1623ce68d826ed96c62643cae/mdit_py_plugins-0.5.0-py3-none-any.whl", hash = "sha256:07a08422fc1936a5d26d146759e9155ea466e842f5ab2f7d2266dd084c8dab1f", size = 57205, upload-time = "2025-08-11T07:25:47.597Z" },
+]
+
+[[package]]
+name = "mdurl"
+version = "0.1.2"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba", size = 8729, upload-time = "2022-08-14T12:40:10.846Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8", size = 9979, upload-time = "2022-08-14T12:40:09.779Z" },
+]
+
+[[package]]
 name = "mergedeep"
 version = "1.3.4"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -2610,6 +2740,15 @@ wheels = [
 ]
 
 [[package]]
+name = "narwhals"
+version = "2.12.0"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/93/f8/e1c28f24b641871c14ccae7ba6381f3c7827789a06e947ce975ae8a9075a/narwhals-2.12.0.tar.gz", hash = "sha256:075b6d56f3a222613793e025744b129439ecdff9292ea6615dd983af7ba6ea44", size = 590404, upload-time = "2025-11-17T10:53:28.381Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0b/9a/c6f79de7ba3a0a8473129936b7b90aa461d3d46fec6f1627672b1dccf4e9/narwhals-2.12.0-py3-none-any.whl", hash = "sha256:baeba5d448a30b04c299a696bd9ee5ff73e4742143e06c49ca316b46539a7cbb", size = 425014, upload-time = "2025-11-17T10:53:26.65Z" },
+]
+
+[[package]]
 name = "netcdf4"
 version = "1.7.2"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -2711,7 +2850,6 @@ dev = [
     { name = "nomad-lab-spm", extra = ["dev", "infrastructure"] },
 ]
 plugins = [
-    { name = "eelsdbconverter" },
     { name = "nomad-aitoolkit" },
     { name = "nomad-normalizer-plugin-bandstructure" },
     { name = "nomad-normalizer-plugin-dos" },
@@ -2734,27 +2872,27 @@ plugins = [
 
 [package.metadata]
 requires-dist = [
-    { name = "eelsdbconverter", marker = "extra == 'plugins'", git = "https://github.com/nomad-coe/nomad-parser-eelsdb.git?rev=entry-point" },
     { name = "nomad-aitoolkit", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git?rev=b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8" },
-    { name = "nomad-lab-spm", extras = ["dev", "infrastructure", "parsing"], marker = "extra == 'dev'", specifier = "==1.4.0" },
-    { name = "nomad-lab-spm", extras = ["infrastructure", "parsing"], specifier = "==1.4.0" },
-    { name = "nomad-normalizer-plugin-bandstructure", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-normalizer-plugin-dos", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-normalizer-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-normalizer-plugin-soap", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-normalizer-plugin-spectra", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-normalizer-plugin-system", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-parser-plugins-atomistic", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-parser-plugins-database", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-parser-plugins-workflow", marker = "extra == 'plugins'", specifier = ">=1.0" },
+    { name = "nomad-lab-spm", extras = ["dev", "infrastructure", "parsing"], marker = "extra == 'dev'", specifier = "==1.3.17.dev100+gb14792ae8" },
+    { name = "nomad-lab-spm", extras = ["infrastructure", "parsing"], specifier = "==1.3.17.dev100+gb14792ae8" },
+    { name = "nomad-normalizer-plugin-bandstructure", marker = "extra == 'plugins'", specifier = "==1.0.3" },
+    { name = "nomad-normalizer-plugin-dos", marker = "extra == 'plugins'", specifier = "==1.0.5" },
+    { name = "nomad-normalizer-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = "==1.0.3" },
+    { name = "nomad-normalizer-plugin-soap", marker = "extra == 'plugins'", specifier = "==1.0.1" },
+    { name = "nomad-normalizer-plugin-spectra", marker = "extra == 'plugins'", specifier = "==1.0.3" },
+    { name = "nomad-normalizer-plugin-system", marker = "extra == 'plugins'", specifier = "==1.0.4" },
+    { name = "nomad-parser-plugins-atomistic", marker = "extra == 'plugins'", specifier = "==1.0.10" },
+    { name = "nomad-parser-plugins-database", marker = "extra == 'plugins'", specifier = "==1.1.1" },
+    { name = "nomad-parser-plugins-workflow", marker = "extra == 'plugins'", specifier = "==1.1.12" },
     { name = "nomad-porous-materials", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-porous-materials.git?rev=522f4a3208077f534f1c5e886527ee2104283d0b" },
-    { name = "nomad-schema-plugin-run", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
-    { name = "nomad-schema-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
+    { name = "nomad-schema-plugin-run", marker = "extra == 'plugins'", specifier = "==1.0.4" },
+    { name = "nomad-schema-plugin-run", marker = "extra == 'plugins'", specifier = ">=1.0.4" },
+    { name = "nomad-schema-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = "==1.0.10" },
     { name = "nomad-simulations", marker = "extra == 'plugins'", specifier = "==0.3.2" },
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=v0.1.1" },
     { name = "pynxtools", marker = "extra == 'plugins'", specifier = "==0.12.0" },
     { name = "pynxtools-camels", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/pynxtools-camels.git?rev=v0.1.1" },
-    { name = "pynxtools-spm", marker = "extra == 'plugins'", specifier = "==0.1.2" },
+    { name = "pynxtools-spm", marker = "extra == 'plugins'", specifier = "==0.2.1" },
     { name = "setuptools" },
 ]
 provides-extras = ["plugins", "jupyter", "dev"]
@@ -2849,7 +2987,7 @@ infrastructure = [
 
 [[package]]
 name = "nomad-lab-spm"
-version = "1.4.0"
+version = "1.3.17.dev100+gb14792ae8"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "ase" },
@@ -2892,9 +3030,9 @@ dependencies = [
     { name = "xarray", version = "2025.6.1", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
     { name = "xarray", version = "2025.11.0", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
 ]
-sdist = { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/96f3926ab7ec2f82d95e813b01c57c93045b8085969957e3e3c1507793fda6b9/nomad_lab_spm-1.4.0.tar.gz", hash = "sha256:96f3926ab7ec2f82d95e813b01c57c93045b8085969957e3e3c1507793fda6b9" }
+sdist = { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/2fce3d538929dcb575acd34765451b73e3cb7eadf21c03cd1f7c8f9df8914e72/nomad_lab_spm-1.3.17.dev100+gb14792ae8.tar.gz", hash = "sha256:2fce3d538929dcb575acd34765451b73e3cb7eadf21c03cd1f7c8f9df8914e72" }
 wheels = [
-    { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/d1c9692f2a2d662c20f2e80faf13b8aa0388d9e383dc050ca733e7d83fd8ae64/nomad_lab_spm-1.4.0-py3-none-any.whl", hash = "sha256:d1c9692f2a2d662c20f2e80faf13b8aa0388d9e383dc050ca733e7d83fd8ae64" },
+    { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/cf96c54b61df21f11a326ce6634e6f4fa13c4170dcd376437c667c01e8af32eb/nomad_lab_spm-1.3.17.dev100+gb14792ae8-py3-none-any.whl", hash = "sha256:cf96c54b61df21f11a326ce6634e6f4fa13c4170dcd376437c667c01e8af32eb" },
 ]
 
 [package.optional-dependencies]
@@ -2940,76 +3078,76 @@ infrastructure = [
 
 [[package]]
 name = "nomad-normalizer-plugin-bandstructure"
-version = "1.0.4"
+version = "1.0.3"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "nomad-lab" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f8/a1/c565274db6171e3605a9917b8cf220c005093abb3f4ac49c9f25d99f9fcb/nomad_normalizer_plugin_bandstructure-1.0.4.tar.gz", hash = "sha256:37b67c3b587676025376fd3a4e9c7d67f2fc8323f2c22ab9f7b8a867e1874bf1", size = 7149474, upload-time = "2025-10-30T19:22:51.096Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fb/4d/aace531ef6af3fbfea0c07f31f25e995efd2ee8b43c588a302b7aa162a48/nomad_normalizer_plugin_bandstructure-1.0.3.tar.gz", hash = "sha256:d19af02610663f0382dfc82ed568e7fdb77fbb82fa03d2557ee0020c843c99b2", size = 7150655, upload-time = "2025-03-17T14:01:30.586Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/69/92/ac965a3116df3cda349df50944ce77fc95601e0510620fa20e9fcda14c43/nomad_normalizer_plugin_bandstructure-1.0.4-py3-none-any.whl", hash = "sha256:71311c192321dd9d9eb8d4e4a8850be5b627ffd24527e71eb4d7435b32f7b695", size = 12199, upload-time = "2025-10-30T19:22:49.608Z" },
+    { url = "https://files.pythonhosted.org/packages/4e/67/b9d6328dc96cd24305a0598de63b885576813f163f86aa884f11641c0785/nomad_normalizer_plugin_bandstructure-1.0.3-py3-none-any.whl", hash = "sha256:c86cfa8eab546d2fb6cd0929cf96c81c99ce5df343515e1a048dc49abb90cbe7", size = 12179, upload-time = "2025-03-17T14:01:29.409Z" },
 ]
 
 [[package]]
 name = "nomad-normalizer-plugin-dos"
-version = "1.0.6"
+version = "1.0.5"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "nomad-dos-fingerprints" },
     { name = "nomad-lab" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/96/32/638129b4dfe92d11a8173894d9470f7f334a41d07a27067b2150b5162d9f/nomad_normalizer_plugin_dos-1.0.6.tar.gz", hash = "sha256:98c1964c5b2f7d3e1771d39480581486ab66169e903345e99dba6ab35696d899", size = 1088101, upload-time = "2025-10-30T19:14:34.644Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b3/d2/d8d33022f5f38d9a953a9a620f8ba66a606f5e527b5d6613f7f348391e3d/nomad_normalizer_plugin_dos-1.0.5.tar.gz", hash = "sha256:9f11101ce70d8126705914ed54c7532c9a18d1f2521919d63c35e35f1ee2de5e", size = 1088170, upload-time = "2025-03-17T14:08:17.554Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5f/16/22fd1278363818b9149e6d4652fcdc9fefa018e5e701311f69313f28fb99/nomad_normalizer_plugin_dos-1.0.6-py3-none-any.whl", hash = "sha256:bc4f2e4532d5a516c5c60a5249053eb5712ba566ecbbc48d049925b586009f1d", size = 12930, upload-time = "2025-10-30T19:14:33.322Z" },
+    { url = "https://files.pythonhosted.org/packages/15/f3/061615643ec48c8d29a639d6e96d2e79b6c9ad7b98c1410b5e7ddeaab9c8/nomad_normalizer_plugin_dos-1.0.5-py3-none-any.whl", hash = "sha256:e111eb5cdfa58a564246188511cc56024f9adb1cea3ca52e5183bded3b16a4da", size = 12902, upload-time = "2025-03-17T14:08:16.031Z" },
 ]
 
 [[package]]
 name = "nomad-normalizer-plugin-simulation-workflow"
-version = "1.0.4"
+version = "1.0.3"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "nomad-lab" },
     { name = "nomad-schema-plugin-simulation-workflow" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3b/eb/231ec5db934a8ff2d5110330a97c6323196ee11e13b92467d32530c81077/nomad_normalizer_plugin_simulation_workflow-1.0.4.tar.gz", hash = "sha256:ebb4b130ede1c8c347c6f6f6b4f380a32eb6e69b3223056bb8f4b3ec22cb002c", size = 102385, upload-time = "2025-10-30T19:05:38.587Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ee/c6/6dce5a3c8673416dfdd603a76dad60125be499991000a2cdf8d475a05aa0/nomad_normalizer_plugin_simulation_workflow-1.0.3.tar.gz", hash = "sha256:c9b3cc7d297e116d1e235086543f1e92c9b7154ab8662efb105204f9a7a3520b", size = 102414, upload-time = "2025-03-17T14:52:43.384Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/30/db/4d2437fc4b8504ceaf016e74896b446e3d3fbf13ddf17480e554c29a447c/nomad_normalizer_plugin_simulation_workflow-1.0.4-py3-none-any.whl", hash = "sha256:c6aff1376866ae83e6141b57ee7e9dc9eb766b0fcf060c7b6195120de5dca139", size = 8618, upload-time = "2025-10-30T19:05:37.647Z" },
+    { url = "https://files.pythonhosted.org/packages/cf/65/c60c11a563a658e58fb68360e41e26d2840ba24cdffa375528207410de6d/nomad_normalizer_plugin_simulation_workflow-1.0.3-py3-none-any.whl", hash = "sha256:1e1d9dd86feb8e7617c18c6a7b6ae33ab95bc3374cbbf3c154aa34ed45bfbffd", size = 8595, upload-time = "2025-03-17T14:52:41.912Z" },
 ]
 
 [[package]]
 name = "nomad-normalizer-plugin-soap"
-version = "1.0.2"
+version = "1.0.1"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "nomad-lab" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c9/77/d9c753bd00a5e3df36ae837f930818e997fecc6a842c485c6661f3e83c82/nomad_normalizer_plugin_soap-1.0.2.tar.gz", hash = "sha256:6c135a7738e991e27e92b27a67c247007313cdd5bfd042f2dcc4ef8fb91b9609", size = 228588, upload-time = "2025-10-30T18:52:48.345Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/55/23/b2a69d31a58f5cf265cb3268c4389db76e900ea423033ccd99b54bcf89ea/nomad_normalizer_plugin_soap-1.0.1.tar.gz", hash = "sha256:d65c8fb281f20130461fa9f77f00d163e5bad215e753311da6531d8b9c3f4712", size = 228583, upload-time = "2025-03-17T14:19:54.953Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/67/05/5a846c25f4e783ecfa30acec6403895dec78b2064217a52bdada59674549/nomad_normalizer_plugin_soap-1.0.2-py3-none-any.whl", hash = "sha256:36806a9e0f66b5d835ad031621008a58987e2625ee97d49899211293a17f7044", size = 9188, upload-time = "2025-10-30T18:52:46.933Z" },
+    { url = "https://files.pythonhosted.org/packages/25/30/0f14ccac20a0113eab2256506dbae7af36085168d89f3fcb0fb49b3968e4/nomad_normalizer_plugin_soap-1.0.1-py3-none-any.whl", hash = "sha256:756e437d8a1ae95e9634f1aecc861af88a26681ab50df066e214194f6e890b0e", size = 9167, upload-time = "2025-03-17T14:19:53.421Z" },
 ]
 
 [[package]]
 name = "nomad-normalizer-plugin-spectra"
+version = "1.0.3"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "nomad-lab" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f8/d1/b23665806c201b0b15ab429b422e3211d6ce7a00f68397285cc8801447ef/nomad_normalizer_plugin_spectra-1.0.3.tar.gz", hash = "sha256:7968c388f24b34d00b1d840cbda3b9cb0f07f34da03c98fe3ef97a9eae3965b5", size = 102099, upload-time = "2025-03-17T14:35:40.458Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9d/93/9761bd73d85b19684d9bb0aaa511f338dff45b1dcc9fbf6e054610781c46/nomad_normalizer_plugin_spectra-1.0.3-py3-none-any.whl", hash = "sha256:3a9e1def216ef330d29c887691bb4a78d2e387e23d3f2f3b936ec936cb424e84", size = 8512, upload-time = "2025-03-17T14:35:39.045Z" },
+]
+
+[[package]]
+name = "nomad-normalizer-plugin-system"
 version = "1.0.4"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "nomad-lab" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/cc/55/8fbc8a36bcc9b5fe5ceeb9917a74f9711d79d2b5e7ef86701e9ecf14f573/nomad_normalizer_plugin_spectra-1.0.4.tar.gz", hash = "sha256:5723166025d73bae2c002b5d2e8c1e9ae53a31574ed0aff297e75736bf7ec788", size = 102063, upload-time = "2025-10-30T18:48:02.094Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/11/e4/b3a2d51bacff41101a25e048a75cd53decfeb2ca602283b6e8c5c3912ef2/nomad_normalizer_plugin_system-1.0.4.tar.gz", hash = "sha256:8f1d8c2f1bec1005d96a0bd768504d6000e80c230a0710909728ae35b8687b93", size = 19867793, upload-time = "2025-08-11T10:29:14.387Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/28/55/2a88ce54418a6874503bf8890abfb5350c7542d1e5056720c4659bb6abbe/nomad_normalizer_plugin_spectra-1.0.4-py3-none-any.whl", hash = "sha256:d9228283c3e2aa570d2899c9fc222b7be8620a08e3d33b541dff274ad4c334d7", size = 8537, upload-time = "2025-10-30T18:48:01.086Z" },
-]
-
-[[package]]
-name = "nomad-normalizer-plugin-system"
-version = "1.0.5"
-source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
-dependencies = [
-    { name = "nomad-lab" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/1b/f6/52114c00a9df7d9536183e3d8ac490f92896f7a0402a53fc70a32a880374/nomad_normalizer_plugin_system-1.0.5.tar.gz", hash = "sha256:9295fe5dc603a6a2cf5faa84fb55cf4e0f01e3a028aedf047ca1b87bd47a8c24", size = 19866766, upload-time = "2025-10-30T18:34:03.206Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/73/ce/f80bcbd7cc49943cb6017b81af62ad3d4bd474bb7f37c7ddd475f3c67ddd/nomad_normalizer_plugin_system-1.0.5-py3-none-any.whl", hash = "sha256:d45644d0184d33d212b00f18fe56316cd204397e5fec7689739cdc4e74dcf661", size = 12998, upload-time = "2025-10-30T18:34:01.954Z" },
+    { url = "https://files.pythonhosted.org/packages/02/3c/ee50b911046cae94e0d2bf6b45cb799964c2cb41b2877b065aa434a72a23/nomad_normalizer_plugin_system-1.0.4-py3-none-any.whl", hash = "sha256:f0974c4d2ef073f5d7cf100230f3261f1636976f310daf6f3f45afa2d5b33995", size = 13021, upload-time = "2025-08-11T10:29:12.025Z" },
 ]
 
 [[package]]
@@ -3040,7 +3178,7 @@ wheels = [
 
 [[package]]
 name = "nomad-parser-plugins-database"
-version = "1.1.3"
+version = "1.1.1"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "nomad-lab" },
@@ -3048,9 +3186,9 @@ dependencies = [
     { name = "nomad-schema-plugin-simulation-workflow" },
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/77/32/3d7f9e353dbb97ab01bf32b8d0da68439b9f8c214e011a2942e9f4f74de2/nomad_parser_plugins_database-1.1.3.tar.gz", hash = "sha256:1f57bc391727f0543c42a2dd8b259823b0687ad208b2b2c56df086487af3ce80", size = 3333590, upload-time = "2025-11-03T14:08:27.359Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b2/a5/214a33baa829e23a591c551738ba6867c10f379e07fcb72998315e26d958/nomad_parser_plugins_database-1.1.1.tar.gz", hash = "sha256:99187e4a68ca79f8545320cd574b3f9d06be8d20bd323af0eef9f5d9e88b0b20", size = 3333622, upload-time = "2025-03-17T16:01:09.704Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a4/c3/9fb61d76c5045f583801f92c7c66964e3665d89cdc11b753fd63f18c6e98/nomad_parser_plugins_database-1.1.3-py3-none-any.whl", hash = "sha256:1bef6d583432c08f292f4445cc90506588c55f7901258d59ece55154ad7ca17a", size = 18205, upload-time = "2025-11-03T14:08:25.861Z" },
+    { url = "https://files.pythonhosted.org/packages/4c/b8/7c29ee9b76c82612acdfba85d6b949ecb0d72dbf519cd666394894ba7bad/nomad_parser_plugins_database-1.1.1-py3-none-any.whl", hash = "sha256:fbcbb04c91399b126463caa222505b39ee734466454d93a7c81a521b94f43a7c", size = 18191, upload-time = "2025-03-17T16:01:08.316Z" },
 ]
 
 [[package]]
@@ -3104,19 +3242,19 @@ dependencies = [
 
 [[package]]
 name = "nomad-schema-plugin-run"
-version = "1.0.5"
+version = "1.0.4"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "nomad-lab" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/20/42/7655ad18feb1b002050b05b88917640fae856b4eb0de7dc573bcef98eab2/nomad_schema_plugin_run-1.0.5.tar.gz", hash = "sha256:44c13a46b77f6a1d32f08826aaf2d5b079f48b973929ca384da411b4a7f1e531", size = 138231, upload-time = "2025-10-30T14:18:57.213Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/48/04/6d3094476243237782367f45ab248d90bea5015840b938e88ba73fc3d29e/nomad_schema_plugin_run-1.0.4.tar.gz", hash = "sha256:5fe6c0408ed28c63e26185ef3bb4df224c60384214c0ab110f67c60995017174", size = 138242, upload-time = "2024-12-11T13:12:44.351Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/36/1a/2730e84401a10fff9adfaba632ea500271f9ca61be7803ec3ed0983a72b4/nomad_schema_plugin_run-1.0.5-py3-none-any.whl", hash = "sha256:19251a878a5b0d5781ddb74483a7d94f4b2d9cbdfae922a0ee6125d2eb9aacfc", size = 45371, upload-time = "2025-10-30T14:18:55.558Z" },
+    { url = "https://files.pythonhosted.org/packages/3d/47/b78cf07b19fb1613b454453209d55503d1c009b202498ee95b9ebd92d5b4/nomad_schema_plugin_run-1.0.4-py3-none-any.whl", hash = "sha256:2e8ad2be33c189ab64d1a81e687a82b5441fd5bd82e44081767ed0d6465dafa8", size = 45332, upload-time = "2024-12-11T13:12:39.732Z" },
 ]
 
 [[package]]
 name = "nomad-schema-plugin-simulation-workflow"
-version = "1.0.11"
+version = "1.0.10"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "mdanalysis", version = "2.9.0", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
@@ -3128,9 +3266,9 @@ dependencies = [
     { name = "scipy", version = "1.15.3", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
     { name = "scipy", version = "1.16.3", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/42/e5/86fe1e8375d3d78b146c9fea39452b41978b61321595936a277ba76c16cb/nomad_schema_plugin_simulation_workflow-1.0.11.tar.gz", hash = "sha256:99cc4fa65b9c0649d7985399688b6fecbb933d97dfcc0f4db59c33aba758bcc8", size = 8866822, upload-time = "2025-10-30T14:25:07.675Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b5/91/c57629b3a81ba58ef8929014e5bd2c670b105829c777007870276a3b0118/nomad_schema_plugin_simulation_workflow-1.0.10.tar.gz", hash = "sha256:a011ec7ffe93e681f9b3e16809151b5c4c03a54c80405777f0e11cc525b3f859", size = 8867123, upload-time = "2025-06-03T11:26:41.218Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0b/30/9b9050f57a0d0df22b60a43562ca99f82820c9fe262c2d2619c49cf61845/nomad_schema_plugin_simulation_workflow-1.0.11-py3-none-any.whl", hash = "sha256:5084ebabaa3b8954d998ee16f353b8ec09278af5f8aadce557777a65ed41f479", size = 55657, upload-time = "2025-10-30T14:25:06.141Z" },
+    { url = "https://files.pythonhosted.org/packages/6c/b4/c90313aa39c86fa48f1e014290cfedf36952c251412a7afc6e64f8de0441/nomad_schema_plugin_simulation_workflow-1.0.10-py3-none-any.whl", hash = "sha256:35fc82179f37b8e11cba34a9ab9e76d31ad44c7c03a248d024a9dda710dded90", size = 55641, upload-time = "2025-06-03T11:26:39.036Z" },
 ]
 
 [[package]]
@@ -3537,6 +3675,40 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/8e/f9/af3e6f5627a9c92f5577eda9e670992e35806b31155b4b371ee44b249436/panedr-0.8.0.tar.gz", hash = "sha256:50ecac36810d12db77903048b4972a234b6e3b2c122ffa2a158eba0ff69effc4", size = 17004, upload-time = "2023-12-23T15:14:13.572Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/63/8d/9ecc9ccd64365c75be17ca7fe15234359c19f97220a29df68acc07e6c9dc/panedr-0.8.0-py3-none-any.whl", hash = "sha256:e988c60ae02d9212692eaa03554d0c8c5042fcff7173082f0afa685117797634", size = 16079, upload-time = "2023-12-23T15:14:11.723Z" },
+]
+
+[[package]]
+name = "panel"
+version = "1.8.3"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "bleach" },
+    { name = "bokeh" },
+    { name = "linkify-it-py" },
+    { name = "markdown" },
+    { name = "markdown-it-py" },
+    { name = "mdit-py-plugins" },
+    { name = "narwhals" },
+    { name = "packaging" },
+    { name = "pandas" },
+    { name = "param" },
+    { name = "pyviz-comms" },
+    { name = "requests" },
+    { name = "tqdm" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/22/92/c37607052d34c5ca9a9ec0c75b9cef7a38ef341178665d5c91852682ed8c/panel-1.8.3.tar.gz", hash = "sha256:192a25fa4afdb25c5d0bf00d3749bb1b3601f25cddb76492e355fa278f91fce8", size = 32093790, upload-time = "2025-11-10T11:17:43.691Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/59/f6/6dd8932f59f0e1e2649a2b2ae4a9e849218aa3d6ae8fdbbd01f5457b3b9b/panel-1.8.3-py3-none-any.whl", hash = "sha256:0e435406c608c382dd3378251d16db4d8189ca44ca508c281e1bfd6c80f47689", size = 30175744, upload-time = "2025-11-10T11:17:40.422Z" },
+]
+
+[[package]]
+name = "param"
+version = "2.3.1"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/c2/bb/ffd1606c28a957fb6444ed3edefe41373cdd7b3e001630b07e3a53a6bea3/param-2.3.1.tar.gz", hash = "sha256:84e59fc3a9bfb0e4c8100eb92d5be529deea3ec9c1f0881a0068c5caf31f21f3", size = 201772, upload-time = "2025-11-25T15:35:54.842Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/da/9d476e9aadfa854719f3cb917e3f7a170a657a182d8d1d6e546594a4872b/param-2.3.1-py3-none-any.whl", hash = "sha256:886b19031438719bbecfd15044dcdd9ed3cb9edb199191294f75600c7081d163", size = 139818, upload-time = "2025-11-25T15:35:53.556Z" },
 ]
 
 [[package]]
@@ -4344,17 +4516,21 @@ dependencies = [
 
 [[package]]
 name = "pynxtools-spm"
-version = "0.1.2"
+version = "0.2.1"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "findiff" },
-    { name = "pint", version = "0.24.4", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "pint", version = "0.25.2", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "hvplot" },
+    { name = "matplotlib" },
     { name = "pynxtools" },
+    { name = "scipy", version = "1.15.3", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "scipy", version = "1.16.3", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "spym" },
+    { name = "tzlocal" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/af/f0/91c04cccf1feac6d1949a4f840e924614f0434c98e3745862fb64d964d14/pynxtools_spm-0.1.2.tar.gz", hash = "sha256:afb36da3fd84804128693fd682782a439cd70139c89dd549020eabc04b9cc0b7", size = 2219105, upload-time = "2025-05-22T19:06:25.791Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d7/01/44de9cdf7620e86af90b8616b2dadcb1fb86946e8f6c23237651dd6d9a1b/pynxtools_spm-0.2.1.tar.gz", hash = "sha256:fa67da4a953061e68613f11f716c3bc94ae90cc12d686f5cc10439684085f5de", size = 1629940, upload-time = "2025-10-19T11:42:52.309Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/83/77/08c7585651d083c50c42316253b3055729f980598d172950000087862054/pynxtools_spm-0.1.2-py3-none-any.whl", hash = "sha256:65b5c3a97f6f2c2cd63ac2d4cae18487d124301e5c23a99f72c656936e20e971", size = 2245629, upload-time = "2025-05-22T19:06:23.732Z" },
+    { url = "https://files.pythonhosted.org/packages/e8/3c/7741d06ce0643104096dae210aa1964e7f964841a68f4a5a595dbcbb1be0/pynxtools_spm-0.2.1-py3-none-any.whl", hash = "sha256:df6c894870cd8aa45a26b7d4b7f15422b5d4c96c1a206bf3c61aab06c8b8cfd3", size = 1656683, upload-time = "2025-10-19T11:42:50.452Z" },
 ]
 
 [[package]]
@@ -4550,6 +4726,18 @@ source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages
 sdist = { url = "https://files.pythonhosted.org/packages/f8/bf/abbd3cdfb8fbc7fb3d4d38d320f2441b1e7cbe29be4f23797b4a2b5d8aac/pytz-2025.2.tar.gz", hash = "sha256:360b9e3dbb49a209c21ad61809c7fb453643e048b38924c765813546746e81c3", size = 320884, upload-time = "2025-03-25T02:25:00.538Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/81/c4/34e93fe5f5429d7570ec1fa436f1986fb1f00c3e0f43a589fe2bbcd22c3f/pytz-2025.2-py2.py3-none-any.whl", hash = "sha256:5ddf76296dd8c44c26eb8f4b6f35488f3ccbf6fbbd7adee0b7262d43f0ec2f00", size = 509225, upload-time = "2025-03-25T02:24:58.468Z" },
+]
+
+[[package]]
+name = "pyviz-comms"
+version = "3.0.6"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "param" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/da/ee/2b5367b911bab506662abffe6f342101a9b3edacee91ff9afe62db5fe9a7/pyviz_comms-3.0.6.tar.gz", hash = "sha256:73d66b620390d97959b2c4d8a2c0778d41fe20581be4717f01e46b8fae8c5695", size = 197772, upload-time = "2025-06-20T16:50:30.97Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/13/5a/f8c0868199bbb231a02616286ce8a4ccb85f5387b9215510297dcfedd214/pyviz_comms-3.0.6-py3-none-any.whl", hash = "sha256:4eba6238cd4a7f4add2d11879ce55411785b7d38a7c5dba42c7a0826ca53e6c2", size = 84275, upload-time = "2025-06-20T16:50:28.826Z" },
 ]
 
 [[package]]
@@ -5252,6 +5440,15 @@ wheels = [
 ]
 
 [[package]]
+name = "spym"
+version = "0.9.2"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/29/22/9422c38f10b8abd0b3a5a7bd3acce39c9340e4243037abeae00512b2dda0/spym-0.9.2.tar.gz", hash = "sha256:23df00eb7ed1f123a7e09c472a7f0fb80085e3d87682e83dc15a29789dee8fb0", size = 20335, upload-time = "2025-08-30T15:49:02.497Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/df/9f/4fb230372241616a9f8c64a96bcb49ef48e90cdbcff105dc49a4409581b4/spym-0.9.2-py3-none-any.whl", hash = "sha256:e7f3d16d0e42785999a80d0743e45ad65cbac1de65b02978cdfb6edcc1fef3a0", size = 23588, upload-time = "2025-08-30T15:49:01.235Z" },
+]
+
+[[package]]
 name = "sqlalchemy"
 version = "2.0.44"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -5568,6 +5765,27 @@ wheels = [
 ]
 
 [[package]]
+name = "tzlocal"
+version = "5.3.1"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "tzdata", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8b/2e/c14812d3d4d9cd1773c6be938f89e5735a1f11a9f184ac3639b93cef35d5/tzlocal-5.3.1.tar.gz", hash = "sha256:cceffc7edecefea1f595541dbd6e990cb1ea3d19bf01b2809f362a03dd7921fd", size = 30761, upload-time = "2025-03-05T21:17:41.549Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c2/14/e2a54fabd4f08cd7af1c07030603c3356b74da07f7cc056e600436edfa17/tzlocal-5.3.1-py3-none-any.whl", hash = "sha256:eb1a66c3ef5847adf7a834f1be0800581b683b5608e74f86ecbcef8ab91bb85d", size = 18026, upload-time = "2025-03-05T21:17:39.857Z" },
+]
+
+[[package]]
+name = "uc-micro-py"
+version = "1.0.3"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/91/7a/146a99696aee0609e3712f2b44c6274566bc368dfe8375191278045186b8/uc-micro-py-1.0.3.tar.gz", hash = "sha256:d321b92cff673ec58027c04015fcaa8bb1e005478643ff4a500882eaab88c48a", size = 6043, upload-time = "2024-02-09T16:52:01.654Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/37/87/1f677586e8ac487e29672e4b17455758fce261de06a0d086167bb760361a/uc_micro_py-1.0.3-py3-none-any.whl", hash = "sha256:db1dffff340817673d7b466ec86114a9dc0e9d4d9b5ba229d9d60e5c12600cd5", size = 6229, upload-time = "2024-02-09T16:52:00.371Z" },
+]
+
+[[package]]
 name = "uncertainties"
 version = "3.2.3"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -5794,6 +6012,15 @@ wheels = [
 ]
 
 [[package]]
+name = "webencodings"
+version = "0.5.1"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/0b/02/ae6ceac1baeda530866a85075641cec12989bd8d31af6d5ab4a3e8c92f47/webencodings-0.5.1.tar.gz", hash = "sha256:b36a1c245f2d304965eb4e0a82848379241dc04b865afcc4aab16748587e1923", size = 9721, upload-time = "2017-04-05T20:21:34.189Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl", hash = "sha256:a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78", size = 11774, upload-time = "2017-04-05T20:21:32.581Z" },
+]
+
+[[package]]
 name = "websockets"
 version = "15.0.1"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -5900,6 +6127,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/39/ad/b072c970cfb2e2724509bf1e8d7fb4084cc186a90d486c9ac4a48ff83186/xarray-2025.11.0.tar.gz", hash = "sha256:d7a4aa4500edbfd60676b1613db97da309ab144cac0bcff0cbf483c61c662af1", size = 3072276, upload-time = "2025-11-17T16:12:09.167Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/86/b4/cfa7aa56807dd2d9db0576c3440b3acd51bae6207338ec5610d4878e5c9b/xarray-2025.11.0-py3-none-any.whl", hash = "sha256:986893b995de4a948429356a3897d78e634243c1cac242bd59d03832b9d72dd1", size = 1375447, upload-time = "2025-11-17T16:12:07.123Z" },
+]
+
+[[package]]
+name = "xyzservices"
+version = "2025.11.0"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ee/0f/022795fc1201e7c29e742a509913badb53ce0b38f64b6db859e2f6339da9/xyzservices-2025.11.0.tar.gz", hash = "sha256:2fc72b49502b25023fd71e8f532fb4beddbbf0aa124d90ea25dba44f545e17ce", size = 1135703, upload-time = "2025-11-22T11:31:51.82Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ef/5c/2c189d18d495dd0fa3f27ccc60762bbc787eed95b9b0147266e72bb76585/xyzservices-2025.11.0-py3-none-any.whl", hash = "sha256:de66a7599a8d6dad63980b77defd1d8f5a5a9cb5fc8774ea1c6e89ca7c2a3d2f", size = 93916, upload-time = "2025-11-22T11:31:50.525Z" },
 ]
 
 [[package]]

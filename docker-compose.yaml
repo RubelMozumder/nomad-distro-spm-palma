@@ -30,7 +30,11 @@ services:
       - elastic:/usr/share/elasticsearch/data
     healthcheck:
       test:
-        ["CMD", "curl", "--fail", "--silent", "http://elastic:9200/_cat/health"]
+        - "CMD"
+        - "curl"
+        - "--fail"
+        - "--silent"
+        - "http://elastic:9200/_cat/health"
       interval: 10s
       timeout: 10s
       retries: 30
@@ -50,14 +54,12 @@ services:
     command: mongod --logpath=/dev/null # --quiet
     healthcheck:
       test:
-        [
-          "CMD",
-          "mongo",
-          "mongo:27017/test",
-          "--quiet",
-          "--eval",
-          "'db.runCommand({ping:1}).ok'",
-        ]
+        - "CMD"
+        - "mongo"
+        - "mongo:27017/test"
+        - "--quiet"
+        - "--eval"
+        - "'db.runCommand({ping:1}).ok'"
       interval: 10s
       timeout: 10s
       retries: 30
@@ -99,7 +101,7 @@ services:
   # nomad worker (processing)
   worker:
     restart: unless-stopped
-    image: ghcr.io/rubelmozumder/nomad-distro-spm-carlosandreslab:carlosandreslab
+    image: ghcr.io/rubelmozumder/nomad-distro-spm-carlosandreslab:CarlosAndresLab
     platform: linux/amd64
     environment:
       NOMAD_SERVICE: nomad_oasis_worker
@@ -120,7 +122,7 @@ services:
       mongo:
         condition: service_healthy
     volumes:
-      - ./configs/nomad.yaml:/app/nomad.yaml
+      # - ./configs/nomad.yaml:/app/nomad.yaml
       - ./.volumes/fs:/app/.volumes/fs
     command: python -m nomad.cli admin run action-internal-worker
     healthcheck:
@@ -218,7 +220,7 @@ services:
   # nomad app (api + proxy)
   app:
     restart: unless-stopped
-    image: ghcr.io/rubelmozumder/nomad-distro-spm-carlosandreslab:carlosandreslab
+    image: ghcr.io/rubelmozumder/nomad-distro-spm-carlosandreslab:CarlosAndresLab
     platform: linux/amd64
     container_name: nomad_oasis_app
     environment:
@@ -228,7 +230,7 @@ services:
       NOMAD_RABBITMQ_HOST: rabbitmq
       NOMAD_ELASTIC_HOST: elastic
       NOMAD_MONGO_HOST: mongo
-      # NOMAD_LOGSTASH_HOST: logtransfer
+      NOMAD_LOGSTASH_HOST: logtransfer
       NOMAD_NORTH_HUB_HOST: north
       NOMAD_TEMPORAL_HOST: temporal
     env_file:
@@ -245,12 +247,16 @@ services:
       north:
         condition: service_started
     volumes:
-      - ./configs/nomad.yaml:/app/nomad.yaml
+      # - ./configs/nomad.yaml:/app/nomad.yaml
       - ./.volumes/fs:/app/.volumes/fs
     command: ./run.sh
     healthcheck:
       test:
-        ["CMD", "curl", "--fail", "--silent", "http://localhost:8000/-/health"]
+        - "CMD"
+        - "curl"
+        - "--fail"
+        - "--silent"
+        - "http://localhost:8000/-/health"
       interval: 10s
       timeout: 10s
       retries: 30
@@ -259,7 +265,7 @@ services:
   # nomad remote tools hub (JupyterHUB, e.g. for AI Toolkit)
   north:
     restart: unless-stopped
-    image: ghcr.io/rubelmozumder/nomad-distro-spm-carlosandreslab:carlosandreslab
+    image: ghcr.io/rubelmozumder/nomad-distro-spm-carlosandreslab:CarlosAndresLab
     platform: linux/amd64
     container_name: nomad_oasis_north
     environment:
@@ -279,17 +285,15 @@ services:
       - ./configs/nomad.yaml:/app/nomad.yaml
       - ./.volumes/fs:/app/.volumes/fs
       - /var/run/docker.sock:/var/run/docker.sock
-    user: "1000:999" # Change the docker group id (here 999) according to the host system
+    user: "1000:999"
     command: python -m nomad.cli admin run hub
     healthcheck:
       test:
-        [
-          "CMD",
-          "curl",
-          "--fail",
-          "--silent",
-          "http://localhost:8081/nomad-oasis/north/hub/health",
-        ]
+        - "CMD"
+        - "curl"
+        - "--fail"
+        - "--silent"
+        - "http://localhost:8081/nomad-oasis/north/hub/health"
       interval: 10s
       timeout: 10s
       retries: 30
@@ -299,7 +303,7 @@ services:
   # to enable the logtransfer service run "docker compose --profile with_logtransfer up"
   logtransfer:
     restart: unless-stopped
-    image: ghcr.io/rubelmozumder/nomad-distro-spm-carlosandreslab:carlosandreslab
+    image: ghcr.io/rubelmozumder/nomad-distro-spm-carlosandreslab/jupyter:CarlosAndresLab
     platform: linux/amd64
     container_name: nomad_oasis_logtransfer
     environment:
@@ -314,7 +318,7 @@ services:
       mongo:
         condition: service_healthy
     volumes:
-      - ./configs/nomad.yaml:/app/nomad.yaml
+      # - ./configs/nomad.yaml:/app/nomad.yaml
       - ./.volumes/fs:/app/.volumes/fs
     command: python -m nomad.cli admin run logtransfer
     profiles: ["with_logtransfer"]
@@ -346,7 +350,7 @@ services:
 
   # jupyterlab image: (this is only used to pull the image, no service is run for this)
   jupyterlab_image:
-    image: ghcr.io/rubelmozumder/nomad-distro-spm-carlosandreslab/jupyter:carlosandreslab
+    image: ghcr.io/rubelmozumder/nomad-distro-spm-carlosandreslab/jupyter:CarlosAndresLab
     platform: linux/amd64
     container_name: nomad_jupyter_image
     pull_policy: always
