@@ -1,4 +1,4 @@
-![docker image](https://github.com/RubelMozumder/nomad-distro-spm-palma/actions/workflows/docker-publish.yml/badge.svg)
+![docker image](https://github.com/RubelMozumder/nomad-distro-spm/actions/workflows/docker-publish.yml/badge.svg)
 
 > [!NOTE]
 > The branch `CarlosAndresLab` is a default and protected branch of this forked repository. 
@@ -7,10 +7,10 @@
 > **Branches and their corresponding images**
 >
 > `CarlosAndresLab`  is the namely spm version that has gallery support for hdf5 files.
->            image: `ghcr.io/rubelmozumder/nomad-distro-spm-palma:carlosandreslab`
+>            image: `ghcr.io/fairmat-nfdi/nomad-distro-spm:carlosandreslab`
 >
 > `test-nomad` is a branch that is used for testing pynxtools, pnxtools plugins and different release or version of nomad.
->            image: `ghcr.io/rubelmozumder/nomad-distro-spm-palma:test-nomad`
+>            image: `ghcr.io/fairmat-nfdi/nomad-distro-spm:test-nomad`
 
 > [!CAUTION]
 > The templated repository will run a GitHub action on creation which might take a few minutes.
@@ -64,16 +64,16 @@ Below are instructions for how to deploy this NOMAD Oasis distribution
 2. Clone the repository or download the repository as a zip file.
 
     ```sh
-    git clone https://github.com/RubelMozumder/nomad-distro-spm-palma.git
-    cd nomad-distro-spm-palma
+    git clone https://github.com/RubelMozumder/nomad-distro-spm.git
+    cd nomad-distro-spm
     ```
 
     or
 
     ```sh
-    curl-L -o nomad-distro-spm-palma.zip "https://github.com/RubelMozumder/nomad-distro-spm-palma/archive/main.zip"
-    unzip nomad-distro-spm-palma.zip
-    cd nomad-distro-spm-palma
+    curl-L -o nomad-distro-spm.zip "https://github.com/RubelMozumder/nomad-distro-spm/archive/main.zip"
+    unzip nomad-distro-spm.zip
+    cd nomad-distro-spm
     ```
 
 3. _On Linux only,_ recursively change the owner of the `.volumes` directory to the nomad user (1000)
@@ -198,7 +198,7 @@ You can find more details on setting up and maintaining an Oasis in the NOMAD do
 ### For an existing Oasis
 
 If you already have an Oasis running you only need to change the image being pulled in
-your `docker-compose.yaml` with `ghcr.io/rubelmozumder/nomad-distro-spm-palma:main` for the services
+your `docker-compose.yaml` with `ghcr.io/fairmat-nfdi/nomad-distro-spm:main` for the services
 `worker`, `app`, `north`, and `logtransfer`.
 
 If you want to use the `nomad.yaml` from this repository you also need to comment out
@@ -294,7 +294,7 @@ Note that the `base-notebook` image is more lightweight and uses less disk space
 The image is quite large and might cause a timeout the first time it is run. In order to avoid this you can pre pull the image with:
 
 ```sh
-docker pull ghcr.io/rubelmozumder/nomad-distro-spm-palma/jupyter:main
+docker pull ghcr.io/fairmat-nfdi/nomad-distro-spm/jupyter:main
 ```
 
 If you want additional python packages to be available to all users in the jupyter hub you can add those to the jupyter table in the [`pyproject.toml`](pyproject.toml):
@@ -431,7 +431,7 @@ Ideally all workflows should be triggered automatically but you might need to ru
 
 ## FAQ/Trouble shooting
 
-_I get an_ `Error response from daemon: Head "https://ghcr.io/v2/RubelMozumder/nomad-distro-spm-palma/manifests/main": unauthorized`
+_I get an_ `Error response from daemon: Head "https://ghcr.io/v2/RubelMozumder/nomad-distro-spm/manifests/main": unauthorized`
 _when trying to pull my docker image._
 
 Most likely you have not made the package public or provided a personal access token (PAT).
