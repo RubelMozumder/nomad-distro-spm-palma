@@ -282,10 +282,10 @@ services:
     env_file:
       - ./.env
     volumes:
-      - ./configs/nomad.yaml:/app/nomad.yaml
+      # - ./configs/nomad.yaml:/app/nomad.yaml
       - ./.volumes/fs:/app/.volumes/fs
       - /var/run/docker.sock:/var/run/docker.sock
-    user: "1000:999"
+    user: "1000:984"
     command: python -m nomad.cli admin run hub
     healthcheck:
       test:
@@ -303,7 +303,7 @@ services:
   # to enable the logtransfer service run "docker compose --profile with_logtransfer up"
   logtransfer:
     restart: unless-stopped
-    image: ghcr.io/fairmat-nfdi/nomad-distro-spm/jupyter:carlosandreslab
+    image: ghcr.io/fairmat-nfdi/nomad-distro-spm:carlosandreslab
     platform: linux/amd64
     container_name: nomad_oasis_logtransfer
     environment:

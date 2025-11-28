@@ -64,14 +64,16 @@ jobs:
       # Commits any changes made to the lockfile
       - name: Commit lock file changes
         if: github.ref_type != 'tag'
+        continue-on-error: true
         run: |
-          git config --global user.name github-actions
-          git config --global user.email github-actions@github.com
-          git add uv.lock
-          if [[ `git status --porcelain` ]]; then
-            git commit -m "Update lockfile"
-            git push origin -o ci.skip # prevent triggering the pipeline again
-          fi
+          echo "Skipping commit for changes to uv.lock"
+          # git config --global user.name github-actions
+          # git config --global user.email github-actions@github.com
+          # git add uv.lock
+          # if [[ `git status --porcelain` ]]; then
+          #   git commit -m "Update lockfile"
+          #   git push origin -o ci.skip # prevent triggering the pipeline again
+          # fi
 
   # Job 2: Run unit tests for all of the plugin
   plugin_unit_tests:
