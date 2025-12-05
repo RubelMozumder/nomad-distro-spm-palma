@@ -34,7 +34,7 @@ plugins = [
   "pynxtools==0.12.0",
   "pynxtools-spm==0.2.2",
   "pynxtools-camels @ git+https://github.com/FAIRmat-NFDI/pynxtools-camels.git@v0.1.1",
-  "nomad-schema-plugin-run==1.0.4",
+  "nomad-schema-plugin-run==1.0.5",
   "nomad-schema-plugin-simulation-workflow==1.0.10",
   "nomad-normalizer-plugin-bandstructure==1.0.3",
   "nomad-normalizer-plugin-dos==1.0.5",
